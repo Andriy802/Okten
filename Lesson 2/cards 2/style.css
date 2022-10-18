@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.service {
+    width: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: grey 1px 1px 5px 1px;
+    padding: 20px 10px;
+    color: #989898;
+}
+
+button {
+    background: #55c2b5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+p{
+    text-align: center;
+}
+
+i {
+
+    font-size: 25px;
+}
+
+h3 {
+    color: #be7b47;
+}

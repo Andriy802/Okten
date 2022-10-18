@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background: #06bbd3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: white;
+    width: 48%;
+    height: 30%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+}
+
+.icon {
+    width: 30%;
+    font-size: 75px;
+    color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 70%;
+    margin: 10px 15px;
+}
+
+h3 {
+    color: orange;
+}
+
+p {
+    color: darkgrey;
+}
