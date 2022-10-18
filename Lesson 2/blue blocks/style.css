@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2%;
+}
+
+.h_18vh {
+    height: 18vh;
+}
+
+.bg_blue {
+    background-color: #246abc;
+    font-size: 25px;
+}
+
+.text_white_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+}
+
+.widgets_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget_item {
+    background-color: #18467b;
+    font-size: 20px;
+    width: 32%;
+}
+
+.contact {
+    height: 60vh;
+}
