@@ -5,6 +5,9 @@ console.log("Exercise 1");
 function sRectangle (a , b){
     return a * b;
 }
+
+// let sRectangle = (a , b) => a * b;
+
 console.log(sRectangle(4,3));
 
 console.log("______________");
@@ -18,6 +21,10 @@ function sCircle (r) {
     const pi = 3.14;
     return pi * (r * r);
 }
+
+// let pi = 3.14;
+// let sCircle = (r) => pi * (r * r);
+
 console.log(sCircle(5));
 
 console.log("______________");
@@ -30,6 +37,9 @@ function sCylinder (r , h) {
     let pi = 3.14;
     return 2 * pi * r * h;
 }
+
+// let sCylinder = (r , h) => 2 * pi * r * h;
+
 console.log(sCylinder(3 , 4));
 
 console.log("______________");
@@ -43,6 +53,13 @@ function arrayPrintItem (arr) {
         console.log(item);
     }
 }
+
+// let arrayPrintItem = (arr) => {
+//     for (let item of arr) {
+//         console.log(item);
+//     }
+// }
+
 arrayPrintItem([22 , "Andriy" , 15]);
 console.log("______________");
 
@@ -52,6 +69,8 @@ console.log("______________");
 function createP (text) {
     document.write(`<p>${text}</p>`);
 }
+
+// let createP = (text) => document.write(`<p>${text}</p>`);
 
 createP("lorem");
 document.write("<hr>");
@@ -66,6 +85,14 @@ function createLi3 (text) {
     }
     document.write("</ul>");
 }
+
+// let createLi3 = (text) => {
+//     document.write("<ul>");
+//     for (let i = 0; i < 3; i++) {
+//         document.write(`<li>${text}</li>`);
+//     }
+//     document.write("</ul>");
+// }
 
 createLi3("lorem");
 document.write("<hr>");
@@ -82,6 +109,14 @@ function createLi (text , num) {
     document.write("</ul>");
 }
 
+// let createLi = (text , num) => {
+//     document.write("<ul>");
+//     for (let i = 0; i < num; i++) {
+//         document.write(`<li>${text}</li>`);
+//     }
+//     document.write("</ul>");
+// }
+
 createLi("lorem" , 5);
 document.write("<hr>");
 
@@ -95,6 +130,14 @@ function createList (arrList) {
     }
     document.write("</ul>");
 }
+
+// let createList = (arrList) => {
+//     document.write("<ul>");
+//     for (let item of arrList) {
+//         document.write(`<li>${item}</li>`);
+//     }
+//     document.write("</ul>");
+// }
 
 createList(["menu" , "logo" , "help" , "wallet"]);
 document.write("<hr>");
@@ -114,6 +157,12 @@ createObjBlock([
     {id:3 , name:"Ihor", age:25}
 ]);
 
+// let createObjBlock = (arrObj) => {
+//     for (let item of arrObj) {
+//         document.write(`<div>${item.id} ${item.name} ${item.age}</div>`);
+//     }
+// }
+
 // Exercise 10
 // - створити функцію яка повертає найменьше число з масиву
 
@@ -126,6 +175,16 @@ function minNumArr (arr) {
     }
     return min;
 }
+
+// let minNumArr = (arr) => {
+//     let min = arr[0];
+//     for (let arrElement of arr) {
+//         if (min >= arrElement) {
+//             min = arrElement;
+//         }
+//     }
+//     return min;
+// }
 
 console.log(minNumArr([15 , 22 , 56 , 32 , 2]));
 
@@ -142,6 +201,14 @@ function sumArr (arr) {
     }
     return numNull;
 }
+
+// let sumArr = (arr) => {
+//     let numNull = 0;
+//     for (let arrElement of arr) {
+//         numNull = numNull + arrElement;
+//     }
+//     return numNull;
+// }
 
 console.log(sumArr([15, 25, 50, 33, 2]));
 
