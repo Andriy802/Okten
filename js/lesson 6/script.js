@@ -116,13 +116,115 @@ console.log("______________");
 
 // Exercise 7
 // описати колоду карт
-// - знайти піковий туз
-// - всі шістки
-// - всі червоні карти
-// - всі буби
-// - всі трефи від 9 та більше
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
 //         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
 //     color:'', // 'red','black'
 // }
+
+let cards = [
+    {cardSuit: 'spade' , value: '6' , color:'black'},
+    {cardSuit: 'spade' , value: '7' , color:'black'},
+    {cardSuit: 'spade' , value: '8' , color:'black'},
+    {cardSuit: 'spade' , value: '9' , color:'black'},
+    {cardSuit: 'spade' , value: '10' , color:'black'},
+    {cardSuit: 'spade' , value: 'jack' , color:'black'},
+    {cardSuit: 'spade' , value: 'queen' , color:'black'},
+    {cardSuit: 'spade' , value: 'king' , color:'black'},
+    {cardSuit: 'spade' , value: 'ace' , color:'black'},
+    {cardSuit: 'clubs' , value: '6' , color:'black'},
+    {cardSuit: 'clubs' , value: '7' , color:'black'},
+    {cardSuit: 'clubs' , value: '8' , color:'black'},
+    {cardSuit: 'clubs' , value: '9' , color:'black'},
+    {cardSuit: 'clubs' , value: '10' , color:'black'},
+    {cardSuit: 'clubs' , value: 'jack' , color:'black'},
+    {cardSuit: 'clubs' , value: 'queen' , color:'black'},
+    {cardSuit: 'clubs' , value: 'king' , color:'black'},
+    {cardSuit: 'clubs' , value: 'ace' , color:'black'},
+    {cardSuit: 'heart' , value: '6' , color:'red'},
+    {cardSuit: 'heart' , value: '7' , color:'red'},
+    {cardSuit: 'heart' , value: '8' , color:'red'},
+    {cardSuit: 'heart' , value: '9' , color:'red'},
+    {cardSuit: 'heart' , value: '10' , color:'red'},
+    {cardSuit: 'heart' , value: 'jack' , color:'red'},
+    {cardSuit: 'heart' , value: 'queen' , color:'red'},
+    {cardSuit: 'heart' , value: 'king' , color:'red'},
+    {cardSuit: 'heart' , value: 'ace' , color:'red'},
+    {cardSuit: 'diamond' , value: '6' , color:'red'},
+    {cardSuit: 'diamond' , value: '7' , color:'red'},
+    {cardSuit: 'diamond' , value: '8' , color:'red'},
+    {cardSuit: 'diamond' , value: '9' , color:'red'},
+    {cardSuit: 'diamond' , value: '10' , color:'red'},
+    {cardSuit: 'diamond' , value: 'jack' , color:'red'},
+    {cardSuit: 'diamond' , value: 'queen' , color:'red'},
+    {cardSuit: 'diamond' , value: 'king' , color:'red'},
+    {cardSuit: 'diamond' , value: 'ace' , color:'red'},
+];
+
+// - знайти піковий туз
+
+let spadeAce = cards.filter(card => card.cardSuit === "spade" && card.value === "ace");
+console.log(spadeAce);
+
+console.log("______________");
+
+// - всі шістки
+
+let all6 = cards.filter(card => card.value === "6");
+console.log(all6);
+
+console.log("______________");
+
+// - всі червоні карти
+
+let redCards = cards.filter(card => card.color === "red");
+console.log(redCards);
+
+console.log("______________");
+
+// - всі буби
+
+let diamondCards = cards.filter(card => card.cardSuit === "diamond");
+console.log(diamondCards);
+
+console.log("______________");
+
+// - всі трефи від 9 та більше
+
+let clubs9AceCards = cards.filter(card => card.cardSuit === "clubs" && card.value >= "9");
+console.log(clubs9AceCards);
+
+console.log("______________");
+
+// Додатково по reduce
+// Взяти описану колоду карт, та за допомоги редюсу попакувати всі карти по "мастях" в об'єкт
+// {
+//     spades:[],
+//         diamonds:[],
+//     hearts:[],
+//     clubs:[]
+// }
+
+let reduce = cards.reduce((accoumulator,card) => {
+    accoumulator.spades.push(card.cardSuit === "spades");
+    accoumulator.diamonds.push(card.cardSuit === "diamonds");
+    accoumulator.hearts.push(card.cardSuit === "hearts");
+    accoumulator.clubs.push(card.cardSuit === "clubs");
+} , {
+    spades:[],
+    diamonds:[],
+    hearts:[],
+    clubs:[]
+});
+
+console.log(reduce);
+
+console.log("______________");
+
+
+
+
+
+
+
+
