@@ -159,6 +159,8 @@ let cards = [
     {cardSuit: 'diamond' , value: 'queen' , color:'red'},
     {cardSuit: 'diamond' , value: 'king' , color:'red'},
     {cardSuit: 'diamond' , value: 'ace' , color:'red'},
+    {cardSuit: 'joker' , value: 'joker' , color:'red'},
+    {cardSuit: 'joker' , value: 'joker' , color:'black'}
 ];
 
 // - знайти піковий туз
@@ -191,7 +193,7 @@ console.log("______________");
 
 // - всі трефи від 9 та більше
 
-let clubs9AceCards = cards.filter(card => card.cardSuit === "clubs" && card.value >= "9");
+let clubs9AceCards = cards.filter(card => card.cardSuit === "clubs" && card.value >= "9" || card.cardSuit === "clubs" && card.value === "10");
 console.log(clubs9AceCards);
 
 console.log("______________");
@@ -206,10 +208,16 @@ console.log("______________");
 // }
 
 let reduce = cards.reduce((accoumulator,card) => {
-    accoumulator.spades.push(card.cardSuit === "spades");
-    accoumulator.diamonds.push(card.cardSuit === "diamonds");
-    accoumulator.hearts.push(card.cardSuit === "hearts");
-    accoumulator.clubs.push(card.cardSuit === "clubs");
+    if (card.cardSuit === "spade") {
+        accoumulator.spades.push(card);
+    } else if (card.cardSuit === "diamond") {
+        accoumulator.diamonds.push(card);
+    } else if (card.cardSuit === "heart") {
+        accoumulator.hearts.push(card);
+    } else if (card.cardSuit === "clubs") {
+        accoumulator.clubs.push(card);
+    }
+    return accoumulator;
 } , {
     spades:[],
     diamonds:[],
@@ -220,11 +228,3 @@ let reduce = cards.reduce((accoumulator,card) => {
 console.log(reduce);
 
 console.log("______________");
-
-
-
-
-
-
-
-
