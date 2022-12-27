@@ -114,11 +114,11 @@ car1.drive();
 car1.info();
 car1.increaseMaxSpeed(20);
 car1.changeYear(2016);
-// car1.addDriver({
-//     name: "Andriy",
-//     age: 22,
-//     experience: "2 years"
-// });
+car1.addDriver({
+    name: "Andriy",
+    age: 22,
+    experience: "2 years"
+});
 car1.info();
 
 console.log("______________");
