@@ -217,12 +217,9 @@ class Prince {
 let prince = new Prince('Andriy', 25, 38);
 
 for (let cinderella of cinderellas) {
-
     if (cinderella.footSize == prince.findedFootSize) {
         console.log(`Prince find cinderella: ${cinderella.name}`);
     }
-
-
 }
 
 console.log("Додаткове завдання");
